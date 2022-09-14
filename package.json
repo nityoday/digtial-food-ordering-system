@@ -5,6 +5,10 @@
   "main": "index.js",
   "repository": "https://github.com/nityoday/mern-project.git",
   "author": "Nityoday Tekchandani <32616539+nityoday@users.noreply.github.com>",
+  "scripts": {
+    "serve": "node server.js",
+    "dev": "nodemon server.js"
+  },
   "license": "MIT",
   "dependencies": {
     "ejs": "^3.1.8",
