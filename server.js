@@ -1,10 +1,10 @@
 const express = require('express'); 
 const app = express()
 const PORT = process.env.PORT || 3000   
+// if we don't have a port from env file then we use 3000, else env is used. 
 const ejs = require('ejs');
 const expressLayout = require('express-ejs-layouts');
 const path = require('path');
-// if we don't have a port from env file then we use 3000, else env is used. 
 
 app.get('/', (req,res) => {
     res.render('home')
