@@ -10,6 +10,10 @@ app.get('/', (req,res) => {
     res.render('home')
 })
 
+//assets to tell the server where assets are
+
+app.use(express.static('public'));
+
 //set template engine
 app.use(expressLayout)
 app.set('views', path.join(__dirname, '/resources/views'))
