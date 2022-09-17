@@ -45,3 +45,21 @@ section.hero {
 .btn-color:hover {
   background: #b23301;
 }
+
+section.cart {
+  background: #F8F8F8;
+}
+section.cart .amount {
+  color: #Fe5F1E;
+}
+
+section.login {
+  background: #F8F8F8;
+  min-height: calc(100vh - 86px);
+}
+section.login a {
+  color: #Fe5F1E;
+}
+section.login a:hover {
+  color: #b23301;
+}

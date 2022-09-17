@@ -12,7 +12,7 @@ nav li:last-child a{
     &:hover{
         background: $primary-hover;
     }
-} 
+}
 
 nav li a{
     transition: $smooth;
@@ -45,5 +45,23 @@ section.hero{
     transition: $smooth;
     &:hover{
         background: $primary-hover;
+    }
+}
+
+section.cart{
+    background: $secondary;
+    .amount{
+        color: $primary;
+    }
+}
+
+section.login{
+    background: $secondary;
+    min-height: calc(100vh - 86px);
+    a{
+        color: $primary;
+        &:hover{    
+         color: $primary-hover;
+        }
     }
 }
