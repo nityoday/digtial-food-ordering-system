@@ -31,7 +31,6 @@ app.get('/register', (req,res) => {
     res.render('auth/register')
 })
 
-
 app.listen(PORT, () => {
     console.log(`Listening on port xyz ${PORT}`); 
 })
