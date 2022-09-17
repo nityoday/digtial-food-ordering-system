@@ -17,19 +17,9 @@ app.use(expressLayout)
 app.set('views', path.join(__dirname, '/resources/views'))
 app.set('view engine', 'ejs');
 
-app.get('/', (req,res) => {
-    res.render('home')
-})
+require('./routes/web')(app)
+// all routes, function is being exported from web.js
 
-app.get('/cart', (req,res) => {
-    res.render('customers/cart')
-})
-app.get('/login', (req,res) => {
-    res.render('auth/login')
-})
-app.get('/register', (req,res) => {
-    res.render('auth/register')
-})
 
 app.listen(PORT, () => {
     console.log(`Listening on port xyz ${PORT}`); 
