@@ -13,4 +13,4 @@ Install Larvel Mix; yarn add laravel-mix -D; https://laravel-mix.com/docs/6.0/in
 
 <!-- yarn watch is for continiously compiling app.js and app.scss into public which is for laravel mix so ig we have to keep that open in a terminal -->
 <!-- and yarn dev is the one which is nodemon types -->
-<!-- both these are readable from node modules so cool.  -->
+<!-- both these are readable from package json so cool.  -->
