@@ -37,3 +37,11 @@ section.hero {
   border-color: #fff;
   color: #fff;
 }
+
+.btn-color {
+  background: #Fe5F1E;
+  transition: all 0.5s ease-in-out;
+}
+.btn-color:hover {
+  background: #b23301;
+}
