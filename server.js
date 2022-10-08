@@ -1,12 +1,16 @@
+require('dotenv').config();
 const express = require('express'); 
-const app = express()
-const PORT = process.env.PORT || 3000   
+const app = express();
+const PORT = process.env.PORT || 3000;
 // if we don't have a port from env file then we use 3000, else env is used. 
 const ejs = require('ejs');
 const expressLayout = require('express-ejs-layouts');
 const path = require('path');
 const mongoose = require('mongoose');
+const flash = require('express-flash');
 const session = require('express-session');
+const MongoDbStore = require('connect-mongo');
+// MongoDbStore(session)
 // Database connection
 const url = 'mongodb://localhost/pizza';
 mongoose.connect(url, { 
@@ -25,11 +29,25 @@ mongoose.connect(url, {
     });
 
 
+// session store
+
+    mongoStore : MongoDbStore.create({
+        mongooseConnection: connection,
+        collection: 'sessions'
+    })
+
 //session
 app.use(session({
     //  cookies should be encrpted, sessions work with cookies 
-    secret: ''
+    secret: process.env.COOKIE_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    // store: mongoStore,
+    cookie: {maxAge: 1000*60*60*24}
+    // 24 hours milli seconds 
 }))
+
+app.use(flash())
 
 //assets to tell the server where assets are
 

@@ -14,6 +14,9 @@ Install Larvel Mix; yarn add laravel-mix -D; https://laravel-mix.com/docs/6.0/in
 yarn add express-session
 Mongoose database connection did not work from video, changed some stuff, check server.js 
 add node modules to git ingoree.. 
+env file to gitingore
+yarn add express-flash
+yarn add connect-mongo
 <!-- yarn watch is for continiously compiling app.js and app.scss into public which is for laravel mix so ig we have to keep that open in a terminal -->
 <!-- and yarn dev is the one which is nodemon types -->
 <!-- both these are readable from package json so cool.  -->
