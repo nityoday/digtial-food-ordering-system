@@ -17,7 +17,12 @@ add node modules to git ingoree..
 env file to gitingore
 yarn add express-flash
 yarn add connect-mongo
+Fix session db mongo connect from https://youtu.be/ftv9SAcW0lI?list=PLXQpH_kZIxTVRmXQN9J0Az76te5mAreLV&t=2520
+
 <!-- yarn watch is for continiously compiling app.js and app.scss into public which is for laravel mix so ig we have to keep that open in a terminal -->
 <!-- and yarn dev is the one which is nodemon types -->
 <!-- both these are readable from package json so cool.  -->
 
+<!-- TODO https://youtu.be/ftv9SAcW0lI?list=PLXQpH_kZIxTVRmXQN9J0Az76te5mAreLV&t=3452
+for delete added items in cart. 
+ -->

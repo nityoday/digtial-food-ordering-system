@@ -12,7 +12,7 @@ const session = require('express-session');
 const MongoDbStore = require('connect-mongo');
 // MongoDbStore(session)
 // Database connection
-const url = 'mongodb://localhost/pizza';
+const url = 'mongodb://localhost/pizza';        // change bottom in mongo session if changed here
 mongoose.connect(url, { 
     useNewUrlParser: true, 
     useUnifiedTopology: true, }).catch((err) => {
@@ -31,10 +31,10 @@ mongoose.connect(url, {
 
 // session store
 
-    mongoStore : MongoDbStore.create({
-        mongooseConnection: connection,
-        collection: 'sessions'
-    })
+    // let mongoStore = new MongoDbStore({
+    //     mongooseConnection: connection,
+    //     collection: 'sessions'
+    // })
 
 //session
 app.use(session({
@@ -42,7 +42,10 @@ app.use(session({
     secret: process.env.COOKIE_SECRET,
     resave: false,
     saveUninitialized: false,
-    // store: mongoStore,
+    store: MongoDbStore.create({
+        client: connection.getClient()
+        // mongoUrl: url               // TODO change later if changed above
+    }),
     cookie: {maxAge: 1000*60*60*24}
     // 24 hours milli seconds 
 }))
