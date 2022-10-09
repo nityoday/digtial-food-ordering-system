@@ -12,6 +12,7 @@ settings.json (workspace) and add
 Install Yarn, Init
 Install Larvel Mix; yarn add laravel-mix -D; https://laravel-mix.com/docs/6.0/installation and scripts https://laravel-mix.com/docs/6.0/upgrade?, yarn add cross-env --save-dev
 yarn add express-session
+yarn add mongoose
 Mongoose database connection did not work from video, changed some stuff, check server.js 
 add node modules to git ingoree.. 
 env file to gitingore
