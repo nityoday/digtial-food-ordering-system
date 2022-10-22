@@ -27,3 +27,5 @@ Fix session db mongo connect from https://youtu.be/ftv9SAcW0lI?list=PLXQpH_kZIxT
 <!-- TODO https://youtu.be/ftv9SAcW0lI?list=PLXQpH_kZIxTVRmXQN9J0Az76te5mAreLV&t=3452
 for delete added items in cart. 
  -->
+
+ last updated watch from https://youtu.be/QtrRTm_L33Q?list=PLXQpH_kZIxTVRmXQN9J0Az76te5mAreLV&t=5830 22/10/22 16:14:20, part 6 at 1:37:10
