@@ -55,6 +55,14 @@ app.use(flash())
 //assets to tell the server where assets are
 
 app.use(express.static('public'));
+app.use(express.json());
+
+// Global middleware (to help show total qty ddefaullt in layout ejs near cart), to make session avaialble for that cart 
+
+app.use((req, res, next) => {
+    res.locals.session = req.session
+    next()
+})
 
 //set template engine
 app.use(expressLayout)
