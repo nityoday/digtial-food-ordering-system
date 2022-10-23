@@ -19,7 +19,10 @@ env file to gitingore
 yarn add express-flash
 yarn add connect-mongo
 Fix session db mongo connect from https://youtu.be/ftv9SAcW0lI?list=PLXQpH_kZIxTVRmXQN9J0Az76te5mAreLV&t=2520
+yarn add axios
 
+noty used for message displaying such as added in cart, etc. 
+yarn add noty
 <!-- yarn watch is for continiously compiling app.js and app.scss into public which is for laravel mix so ig we have to keep that open in a terminal -->
 <!-- and yarn dev is the one which is nodemon types -->
 <!-- both these are readable from package json so cool.  -->
@@ -28,4 +31,4 @@ Fix session db mongo connect from https://youtu.be/ftv9SAcW0lI?list=PLXQpH_kZIxT
 for delete added items in cart. 
  -->
 
- last updated watch from https://youtu.be/QtrRTm_L33Q?list=PLXQpH_kZIxTVRmXQN9J0Az76te5mAreLV&t=5830 22/10/22 16:14:20, part 6 at 1:37:10
+ last updated watch from 
