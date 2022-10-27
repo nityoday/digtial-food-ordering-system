@@ -4,11 +4,12 @@ const cartController = require('../app/http/controllers/customers/cartController
 
 
  function initRoutes(app){
+    //post events should be sent to controller as this can be large 
     app.get('/',homeController().index)
     app.get('/register', authController().register)
-    app.get('/login', authController().login)
-    //post events should be sent to controller as this can be large 
     app.post('/register', authController().postRegister)
+    app.get('/login', authController().login)
+    app.post('/login', authController().postLogin)
     
     
     

@@ -1,4 +1,6 @@
 require('dotenv').config();
+const passport = require('passport');
+const session = require('express-session');
 const express = require('express'); 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -8,7 +10,6 @@ const expressLayout = require('express-ejs-layouts');
 const path = require('path');
 const mongoose = require('mongoose');
 const flash = require('express-flash');
-const session = require('express-session');
 const MongoDbStore = require('connect-mongo');
 // MongoDbStore(session)
 // Database connection
@@ -27,6 +28,8 @@ mongoose.connect(url, {
     connection.once('open', () => {
         console.log('Database Connected');
     });
+
+    
 
 
 // session store
@@ -51,7 +54,10 @@ app.use(session({
 }))
 
 app.use(flash())
-
+const passportInit = require('./app/config/passport')
+    passportInit(passport)  //passing what we required above
+    app.use(passport.initialize())
+    app.use(passport.session())
 //assets to tell the server where assets are
 
 app.use(express.static('public'));

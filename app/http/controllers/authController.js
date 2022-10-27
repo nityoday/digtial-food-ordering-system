@@ -1,10 +1,40 @@
 const User = require('../../models/user')
 const bcrypt = require('bcrypt')
+const passport = require('passport')
 function authController(){
     // factory functions: programming pattern where we use closures
     return {
         login (req, res){
             res.render('auth/login')
+        },
+        postLogin(req, res, next){
+            // params: local (strategy as to whether it's google ath/ facebook auth/ local (ours))
+            // info is the messages that we sent from passport. 
+            // these 3 are passport's done function only..
+            const { email, password }   = req.body
+            // Validate request 
+            if(!email || !password) {
+                req.flash('error', 'All fields are required')
+                return res.redirect('/login')
+            }
+            passport.authenticate('local',(err, user, info) => {
+                // when we call authenticate it returns a function which we have to call whic is (req,res,next at end of this bracket)
+                if(err){
+                    req.flash('error', info.message)
+                    return next(err)
+                }
+                if (!user){ // this is called when we have the second param as false in passport.js file (user not logged in basically )
+                    req.flash('error', info.message )
+                    return res.redirect('/login')
+                }
+                req.logIn(user, (err) => {
+                    if(err){
+                        req.flash('error', info.message)
+                        return next(err)
+                    }
+                    return res.redirect('/')
+                })
+            })(req, res, next)
         },
         register (req, res){
             res.render('auth/register')
