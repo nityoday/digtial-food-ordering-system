@@ -1,4 +1,5 @@
 const User = require('../../models/user')
+const bcrypt = require('bcrypt')
 function authController(){
     // factory functions: programming pattern where we use closures
     return {
@@ -8,7 +9,7 @@ function authController(){
         register (req, res){
             res.render('auth/register')
         },
-        postRegister(req, res){
+        async postRegister(req, res){
             const { name, email, password } = req.body
             // Validation
             if (!name || !email || !password){
@@ -31,14 +32,25 @@ function authController(){
 
             //hasing passwords first 
 
+            const hashedPassword = await bcrypt.hash(password, 10)
+
             //else create user
             const user = new User({
-                user: name,
-                email: email,
-                password: password
+                // user: name,     
+                // or you can directly write name, instead of user: name,
+
+                name,
+                email,
+                password: hashedPassword
             })
 
-
+            user.save().then((user) => {
+                // later redirect to orders page for the customer,and login for them. 
+                return res.redirect('/')
+            }).catch(err => {
+                req.flash('error', 'Whoops! Something went wrong. Please contact administrators. '+ err );
+                return res.redirect('/register')
+            })
 
             console.log(req.body)
         }
