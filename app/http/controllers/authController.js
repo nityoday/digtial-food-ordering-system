@@ -82,7 +82,13 @@ function authController(){
                 return res.redirect('/register')
             })
 
-            console.log(req.body)
+            // console.log(req.body)
+        },
+        logout(req, res){
+            req.logout(function(err){
+                if (err) throw err;
+            })
+            return res.redirect('/login')
         }
     }
 }

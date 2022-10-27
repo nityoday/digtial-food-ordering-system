@@ -32,7 +32,11 @@
                 <li class="ml-6"><a href=""> Offers </a></li>
                 <% if(user) { %>
                     <!-- this user will come only if we make it avaiable to client from a global middleware -->
-                <li class="ml-6"><a href="/logout"> Logout </a></li>
+                <li class="ml-6">
+                    <form id="logout" action="/logout" method="post">
+                        <a onclick="document.getElementById('logout').submit()" href="#"> Logout </a>
+                    </form>
+                </li>
                 <% } else { %>
                 <li class="ml-6"><a href="/register"> Register </a></li>
                 <li class="ml-6"><a href="/login"> Login </a></li>
