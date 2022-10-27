@@ -55,7 +55,8 @@ app.use(flash())
 //assets to tell the server where assets are
 
 app.use(express.static('public'));
-app.use(express.json());
+app.use(express.urlencoded({extended: false})); // to get form data such as register
+app.use(express.json());    // to get the json data
 
 // Global middleware (to help show total qty ddefaullt in layout ejs near cart), to make session avaialble for that cart 
 
