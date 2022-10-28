@@ -21,7 +21,8 @@
     <nav class="container mx-auto flex items-center justify-between py-4">
         <div class="flex items-center">
             <!-- from public folder-->
-            <img src="/img/logo.png" alt="logo">
+            <a href="/"><img src="/img/logo.png" alt="logo"></a>
+            
             <% if(user) { %>
                 <p class="ml-6"> Welcome <%= user.name %>! </p>
             <% } %>
