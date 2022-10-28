@@ -49,7 +49,15 @@ addToCart.forEach(function (btn) {
 
     updateCart(pizza); // console.log(pizza)
   });
-}); //  this automatically compiles and goes into the public folder due to laravel mix.
+}); //  this automatically compiles and goes into the public folder due to laravel mix. 
+
+var alertMsg = docuemnt.querySelector('#success-alert');
+
+if (alertMsg) {
+  setTimeout(function () {
+    alertMsg.remove();
+  }, 2000);
+}
 
 /***/ }),
 

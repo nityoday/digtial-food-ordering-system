@@ -38,3 +38,11 @@ addToCart.forEach((btn) => {
     })
 })
 //  this automatically compiles and goes into the public folder due to laravel mix. 
+
+
+const alertMsg = docuemnt.querySelector('#success-alert')
+if(alertMsg){
+    setTimeout(() => {
+        alertMsg.remove()
+    }, 2000)
+}
