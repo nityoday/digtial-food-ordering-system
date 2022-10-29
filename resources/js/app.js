@@ -19,7 +19,7 @@ function updateCart(pizza){
     }).catch(err => {
         new Noty({
             type: 'error', 
-            timeout:  590, 
+            timeout:  590,
             text: 'Sorry, something went wrong, please try again later',
             layout: 'bottomCenter'
             // progressBar: false;
@@ -49,5 +49,6 @@ addToCart.forEach((btn) => {
 //         alertMsg.remove()
 //     }, 2000)
 // }
+
 
 initAdmin()
