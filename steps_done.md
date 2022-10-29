@@ -29,6 +29,10 @@ yarn add moment
 noty used for message displaying such as added in cart, etc. , bcyrpt for hashing passwords  
 passport for login system
 moment for time formatting 
+using Lineawesome CDN for the logos in single order view page.. 
+
+
+
 <!-- yarn watch is for continiously compiling app.js and app.scss into public which is for laravel mix so ig we have to keep that open in a terminal -->
 <!-- and yarn dev is the one which is nodemon types -->
 <!-- both these are readable from package json so cool.  -->
