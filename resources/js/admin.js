@@ -87,7 +87,7 @@ export function initAdmin() {
     //         timeout: 1000,
     //         text: 'New order!',
     //         progressBar: false,
-    //     }).show();
+    //     }).show(); 
     //     orders.unshift(order)
     //     orderTableBody.innerHTML = ''
     //     orderTableBody.innerHTML = generateMarkup(orders)
