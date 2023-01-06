@@ -278,59 +278,109 @@
 body {
   font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
-  color: #232323;
-  height: 4000px;
+  color: #252323;
+  height: 100%;
+}
+
+t {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 nav li:last-child a {
-  background: #FE5F1E;
+  background: #DB162F;
 }
 nav li:last-child a:hover {
-  background: #b23301;
+  background: #7D70BA;
 }
 
 nav li a {
+  font-size: large;
   transition: all 0.3s ease-in-out;
 }
 nav li a:hover {
-  color: #FE5F1E;
+  color: #DB162F;
 }
 
 section.hero {
   background: #F8F8F8;
 }
 
+.frame {
+  height: 600px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  -webkit-animation: image alternate;
+          animation: image alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes image {
+  0% {
+    background-image: url("https://images.pexels.com/photos/5638329/pexels-photo-5638329.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  }
+  25% {
+    background-image: url("https://images.pexels.com/photos/3184195/pexels-photo-3184195.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  }
+  50% {
+    background-image: url("https://images.pexels.com/photos/3757999/pexels-photo-3757999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  }
+  100% {
+    background-image: url("https://images.pexels.com/photos/511763/pexels-photo-511763.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  }
+}
+
+@keyframes image {
+  0% {
+    background-image: url("https://images.pexels.com/photos/5638329/pexels-photo-5638329.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  }
+  25% {
+    background-image: url("https://images.pexels.com/photos/3184195/pexels-photo-3184195.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  }
+  50% {
+    background-image: url("https://images.pexels.com/photos/3757999/pexels-photo-3757999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  }
+  100% {
+    background-image: url("https://images.pexels.com/photos/511763/pexels-photo-511763.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  }
+}
 .size {
   background: #F8F8F8;
 }
 
 .add-to-cart {
-  border: 2px solid #FE5F1E;
+  border: 2px solid #8CD790;
   color: primary;
   transition: all 0.3s ease-in-out;
 }
 .add-to-cart:hover {
-  background: #FE5F1E;
+  background: #6BF178;
   border-color: #fff;
-  color: #fff;
+  color: #252323;
 }
 .add-to-cart:focus {
   outline: none;
 }
 
-.btn-color {
-  background: #FE5F1E;
+.btncolor {
+  background: #DB162F;
   transition: all 0.3s ease-in-out;
 }
-.btn-color:hover {
-  background: #b23301;
+.btncolor:hover {
+  background: #7D70BA;
 }
 
 section.cart {
   background: #F8F8F8;
 }
 section.cart .amount {
-  color: #FE5F1E;
+  color: #DB162F;
 }
 
 section.login {
@@ -338,10 +388,10 @@ section.login {
   min-height: calc(100vh - 86px);
 }
 section.login a {
-  color: #FE5F1E;
+  color: #DB162F;
 }
 section.login a:hover {
-  color: #b23301;
+  color: #7D70BA;
 }
 
 .noty_theme_mint {
@@ -350,7 +400,7 @@ section.login a:hover {
 }
 
 a.link {
-  color: #FE5F1E;
+  color: #DB162F;
 }
 
 section.status {
@@ -372,7 +422,7 @@ section.status {
   position: absolute;
   left: -10px;
   top: 50%;
-  background: #232323;
+  background: #252323;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -422,7 +472,7 @@ section.status {
   left: -6px;
   width: 2px;
   height: 100%;
-  background: #232323;
+  background: #252323;
   margin-top: 10px;
 }
 
@@ -443,11 +493,11 @@ section.status {
 }
 
 .status-box ul li.current span {
-  color: #FE5F1E;
+  color: #DB162F;
 }
 
 .status-box ul li.current span:after {
-  background: #FE5F1E;
+  background: #DB162F;
 }
 
 .status-box ul li small {
@@ -466,8 +516,14 @@ section.status {
     white-space: nowrap;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .status-box ul li span:before {
     font-size: 34px;
   }
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }

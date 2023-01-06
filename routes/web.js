@@ -4,6 +4,8 @@ const cartController = require('../app/http/controllers/customers/cartController
 const orderController = require('../app/http/controllers/customers/orderController')
 const adminOrderController = require('../app/http/controllers/admin/orderController')
 const statusController = require('../app/http/controllers/admin/statusController')
+const aboutController = require('../app/http/controllers/aboutController')
+
 
 
 //middlewares
@@ -31,6 +33,7 @@ const admin = require('../app/http/middlewares/admin')
     app.post('/orders', auth ,orderController().store)
     app.get('/customers/orders', auth ,orderController().index )
     app.get('/customers/orders/:id', auth, orderController().show)
+    app.get('/about', aboutController().index)
 
 
 
