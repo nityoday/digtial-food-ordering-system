@@ -1,0 +1,136 @@
+[{
+  "name": "Sada",
+  "image": "sadadosa.jpeg",
+  "price": "30",
+  "Description": "This can be prepared in both crispy and normal way"
+},{
+  "name": "Masala Dosa",
+  "image": "masaladoa.jpeg",
+  "price": "45",
+  "Description": "This comes with a sabzi of potato and spicy way"
+},{
+  "name": "Pav Bhaji dosa",
+  "image": "pavbhaji.jpeg",
+  "price": "55",
+  "Description": "Comes with the bhaji along with the dosa"
+},{
+  "name": "Cheese Dosa",
+  "image": "cheesedosa.jpeg",
+  "price": "60",
+  "Description": "Combination of spring roll and dosa"
+},{
+  "name": "Butter Sada",
+  "image": "butterdosa.jpeg",
+  "price": "35",
+  "Description": "Butter over your crispy dosa along with spice" 
+},{
+  
+  "name": "Veg. Frankie",
+  "image": "frankie.jpeg",
+  "price": "40",
+  "Description": "Vegetables wrapped under soft chapati"
+},{
+  "name": "Cheese Frankie",
+  "image": "cheesefrankie.jpeg",
+  "price": "65",
+  "Description": "Cheese along with veg Frankie along with spice"
+},{
+  "name": "Schezwan Frankie",
+  "image": "schezwanfrankie.jpeg",
+  "price": "50",
+  "Description": "Schezwan along with vegfrankie to give spicy flavour"
+},{
+  
+  "name": "Lime Juice",
+  "image": "lime.jpeg",
+  "price": "25",
+  "Description": "Fresh Lemon Juice with some tangy sourness"
+},{
+  "name": "Orange Juice",
+  "image": "orange.jpeg",
+  "price": "60",
+  "Description": "Orange juice made with oragnic oranges"
+},{
+  "name": "Sugarcane",
+  "image": "sugarcane.jpeg",
+  "price": "60",
+  "Description": "Sugarcane straight from farms along with icecube"
+},{
+  "name": "Pineapple",
+  "image": "pineapple.jpeg",
+  "price": "60",
+  "Description": "Pineapple juice along with some chat masala"
+},{
+ 
+  "name": "Veg. Sandwich",
+  "image": "vegsandwich.jpeg",
+  "price": "25",
+  "Description": "Filled with veggies capsicum, cucumber, tomatoes & potato"
+},{
+  "name": "Cheese Sandwich",
+  "image": "cheesesandwich.jpeg",
+  "price": "60",
+  "Description": "Cheese along with veg sandwich along with added veggies"
+},{
+  "name": "Grilled Sandwich",
+  "image": "grilledsandwich.jpeg",
+  "price": "50",
+  "Description": "Grilled with toaster along with veg sandwich"
+},{
+  "name": "Chilli Cheese Sandwich",
+  "image": "cheesechilli.jpeg",
+  "price": "70",
+  "Description": "Spicy and cheesy sauce on the toast"
+},{
+
+  "name": "Chowpati Bhel",
+  "image": "chowpatybhel.jpeg",
+  "price": "45",
+  "Description": "Authentic Bhel in classic style along with spices"
+},{
+  "name": "Chinese Bhel",
+  "image": "chinesebhel.jpeg",
+  "price": "50",
+  "Description": "Chinese rice and noddles server with mixture of manchurian"
+},{
+  "name": "Sev Batatapuri",
+  "image": "sevbatatapuri.jpeg",
+  "price": "45",
+  "Description": "Sev + Potato + pani puri along with spices"
+},{
+  "name": "Dahi Batata Puri",
+  "image": "dahibatatapuri.jpeg",
+  "price": "50",
+  "Description": "Dahi + Potato + pani puri along with spices"
+},{
+
+  "name": "Veg Rice",
+  "image": "friedrice.jpeg",
+  "price": "75",
+  "Description": "Vegetable with rice"
+},{
+  "name": "Schezwan Rice",
+  "image": "schezwanfriedrice.jpeg",
+  "price": "80",
+  "Description": "Schezwan sauce + rice"
+},{
+  "name": "Paneer Schezwan Rice",
+  "image": "paneerschezwanrice.jpeg",
+  "price": "90",
+  "Description": "Spicy tangy paneer with fired rice"
+},{
+  "name": "Manchurian",
+  "image": "manchurian.jpeg",
+  "price": "70",
+  "Description": "DRY Manchurian"
+},{
+  "name": "Veg. Crispy",
+  "image": "vegcrispy.jpeg",
+  "price": "70",
+  "Description": "Crispiness along with manchurian"
+},{
+  "name": "Pizza",
+  "image": "pizza.png",
+  "price": "100",
+  "Description": "Fresh Italian Bread with Exotic mix of Veggies and Cheese"
+}]

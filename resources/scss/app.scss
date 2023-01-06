@@ -5,8 +5,13 @@
 body {
     font-family: 'Lato', sans-serif;
     -webkit-font-smoothing:antialiased;
-    color: $dark;  
-    height: 4000px;
+    color: $dark;
+    height: 100%;  
+}
+
+t{
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 nav li:last-child a{
@@ -17,14 +22,42 @@ nav li:last-child a{
 }
 
 nav li a{
+    font-size: large;
     transition: $smooth;
     &:hover{
         color: $primary;
     }
+    
 }
 
 section.hero{
     background: $secondary;
+}
+
+.frame {
+    height: 600px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    animation: image alternate;
+    animation-iteration-count: infinite;
+    animation-duration: 30s;
+    animation-timing-function:ease-in-out;
+}
+
+@keyframes image {
+    0% {
+        background-image: url('https://images.pexels.com/photos/5638329/pexels-photo-5638329.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    }
+    25%{
+        background-image: url('https://images.pexels.com/photos/3184195/pexels-photo-3184195.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    }
+    50% {
+        background-image: url('https://images.pexels.com/photos/3757999/pexels-photo-3757999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    }
+    100% {
+        background-image: url('https://images.pexels.com/photos/511763/pexels-photo-511763.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    }
 }
 
 .size{
@@ -32,20 +65,20 @@ section.hero{
 }
 
 .add-to-cart{
-    border: 2px solid $primary;
+    border: 2px solid $bgreen;
     color: primary;
     transition: $smooth;
     &:hover{
-        background: $primary;
+        background: $green;
         border-color: $pure;
-        color: $pure;
+        color: $dark;
     }
     &:focus{
         outline: none;
     }
 }
 
-.btn-color{
+.btncolor{
     background: $primary;
     transition: $smooth;
     &:hover{
@@ -190,20 +223,26 @@ section.status{
     margin-top: 8px;
 }
 
-@media(max-width: 1060px){
-    .container{
-        max-width: 90%
+@media(max-width:1060px) {
+    .container {
+        max-width: 90%;
     }
-    table{
+    table {
         display: block;
         overflow-x: auto;
         white-space: nowrap;
     }
-
 }
 
-@media(max-width: 768px){
+@media(max-width: 767px) {
     .status-box ul li span:before{
         font-size: 34px;
     }
+}
+
+.footer {
+    position:fixed;
+    left:0;
+    bottom:0;
+    width: 100%;
 }

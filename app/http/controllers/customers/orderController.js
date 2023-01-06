@@ -10,7 +10,7 @@ function orderController(){
                 return res.redirect('/cart')
             }
             const order = new Order({
-                customerId: req.user._id, // comes from passport which makes it avaialble as a user
+                customerId: req.user._id, 
                 items: req.session.cart.items,
                 phone,
                 address

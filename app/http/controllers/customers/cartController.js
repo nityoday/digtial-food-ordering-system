@@ -1,5 +1,4 @@
 function cartController(){
-    // factory functions: programming pattern where we use closures
     return {
         index (req, res){
             res.render('customers/cart')
@@ -31,7 +30,6 @@ function cartController(){
                 cart.totalPrice = cart.totalPrice + req.body.price 
             }
             return res.json({ totalQty: req.session.cart.totalQty})
-            // return res.json({ totalQty: req.session.cart})
         }
     }
 }

@@ -32,28 +32,12 @@ function updateCart(pizza){
 addToCart.forEach((btn) => {
     btn.addEventListener('click', (e) => {
         let pizza = JSON.parse(btn.dataset.pizza)
-        // this comes from data-pizza from button in home.ejs 
-        // after clicking we need to update the cart and send the pizza o the cart
         updateCart(pizza)
-        // console.log(pizza)
     })
 })
-//  this automatically compiles and goes into the public folder due to laravel mix. 
-
-
-// not working:
-
-// const alertMsg = docuemnt.querySelector('#success-alert')
-// if(alertMsg){
-//     setTimeout(() => {
-//         alertMsg.remove()
-//     }, 2000)
-// }
-
 
 initAdmin()
 
-// change order status
 let statuses = document.querySelectorAll('.status_line')
 let order = document.querySelector('#hiddenInput') ? document.querySelector('#hiddenInput').value: null
 order = JSON.parse(order)
@@ -61,7 +45,6 @@ order = JSON.parse(order)
 
 let time = document.createElement('small')
 
-// console.log(order)
 function updateStatus(order){
     let StepCompleted = true;
     statuses.forEach((status) => {

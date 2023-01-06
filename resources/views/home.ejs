@@ -1,20 +1,22 @@
     <!-- hero section is where the home page below nav bar -->
-    <section class="hero py-16">
-        <div class="container mx-auto flex items-center justify-between">
-            <div id="left_div" class="w-1/2">
-                <h6 class="text-lg"> <em> Are you Hungry? </em> </h6>
-                <h1 class="text-6xl md:text-6xl font-bold">Don't wait</h1>
-                <button class="px-6 py-2 rounded-full text-white font-bold mt-4 btn-color">Order Now!</button>
+    <section class="hero">
+        <div class="frame container mx-auto flex items-center justify-between py-16">
+            <div id="left_div" class="w-screen text-center text-white font-extrabold underline decoration-4 hover:underline-offset-4">
+                <t class="md:text-2xl lg:text-4xl xl:text-6xl font-bold">Welcome To Aditi Fast Food!</t>
+                <h6 class="text-lg mt-4" style="text-shadow:2px 2px 4px #000000;"> <em> Aditi Goes Digital. Order Your Favourite Food Online! </em> </h6>
+             <a href="/#menu">
+                <button class="btncolor px-6 py-2 rounded-full text-white font-bold mt-4 btn-color text-xl" style="box-shadow:2px 2px 4px #000000;">Order Now!</button>
+             </a>    
             </div>
-            <div id="right_div" class="w-1/2" >
+            <!-- <div id="right_div" class="w-1/2" >
                 <img src="/img/hero-pizza.png" alt="Pizza Image">
-            </div>
+            </div> -->
         </div> 
     </section> 
 
 <!-- pizzas -->
-    <section class="menu container mx-auto py-8">
-        <h1 class="text-xl font-bold mb-8">All Pizzas</h1>
+    <section id="menu" class="menu container mx-auto py-8">
+        <h1 class="font-sans font-light text-6xl mb-8 text-center underline decoration-2">Aditi's Menu</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-20 gap-x-4">
             <!-- this below div is for the card, used 6 times. -->
             <% pizzas.forEach(function(pizza){ %>
@@ -22,7 +24,7 @@
                     <img class="h-40 mb-4 mx-auto" src="/img/<%= pizza.image %>" alt="">
                     <div class="text-center">
                         <h2 class="mb-4 text-lg"><%= pizza.name %></h2>
-                        <span class="size py-1 px-4 rounded-full uppercase text-xs"><%= pizza.size %></span>
+                        <span class="size py-1 px-4 rounded-full uppercase text-xs"><%= pizza.Description %></span>
                         <div class="flex items-center justify-around mt-6">
                             <span class="font-bold text-lg"><%= pizza.price %> INR</span>
                             <button data-pizza="<%= JSON.stringify(pizza)%>" class="add-to-cart rounded-full py-1 px-6 flex items-center font-bold">

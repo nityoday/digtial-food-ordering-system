@@ -3,17 +3,14 @@ const passport = require('passport');
 const session = require('express-session');
 const express = require('express'); 
 const app = express();
-const PORT = process.env.PORT || 3000;
-// if we don't have a port from env file then we use 3000, else env is used. 
+const PORT = 3000; 
 const ejs = require('ejs');
 const expressLayout = require('express-ejs-layouts');
 const path = require('path');
 const mongoose = require('mongoose');
 const flash = require('express-flash');
 const MongoDbStore = require('connect-mongo');
-// MongoDbStore(session)
-// Database connection
-const url = 'mongodb://localhost/pizza';        // change bottom in mongo session if changed here
+const url = 'mongodb://localhost/pizza';
 mongoose.connect(url, { 
     useNewUrlParser: true, 
     useUnifiedTopology: true, }).catch((err) => {
@@ -29,16 +26,6 @@ mongoose.connect(url, {
         console.log('Database Connected');
     });
 
-    
-
-
-// session store
-
-    // let mongoStore = new MongoDbStore({
-    //     mongooseConnection: connection,
-    //     collection: 'sessions'
-    // })
-
 //session
 app.use(session({
     //  cookies should be encrpted, sessions work with cookies 
@@ -47,10 +34,8 @@ app.use(session({
     saveUninitialized: false,
     store: MongoDbStore.create({
         client: connection.getClient()
-        // mongoUrl: url               // TODO change later if changed above
     }),
-    cookie: {maxAge: 1000*60*60*24}
-    // 24 hours milli seconds 
+    cookie: {maxAge: 1000*60*60*24} // 24 hours milli seconds 
 }))
 
 app.use(flash())
@@ -84,3 +69,4 @@ require('./routes/web')(app)
 app.listen(PORT, () => {
     console.log(`Listening on port xyz ${PORT}`); 
 })
+

@@ -7,7 +7,7 @@ function init(passport){
         // first we check whether email exists
         const user = await User.findOne({email: email})
         if(!user){
-            return done(null, false, {message: 'This account does not exist please login to continue'})
+            return done(null, false, {message: 'This account does not exist. Please register to continue'})
             // null is error 
         }
 
@@ -15,9 +15,9 @@ function init(passport){
             if(match){
                 return done(null, user, {message: 'Login Success'})
             }
-            return done(null, false, {message: 'Incorrect Password Please try again'})
+            return done(null, false, {message: 'Incorrect Password. Please try again'})
         }).catch(err => {
-            return done(null, false, {message: 'Something went wrong Please contact administrators'})
+            return done(null, false, {message: 'Something went wrong. Please contact administrators'})
         })
     }))
 

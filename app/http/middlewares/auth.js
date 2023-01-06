@@ -4,7 +4,6 @@ function auth(req, res, next){
         return next()
     }
     return res.redirect('/login')
-    // TODO Make the unauthroized page here
 }
 
 module.exports = auth

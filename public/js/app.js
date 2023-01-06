@@ -99,26 +99,15 @@ function updateCart(pizza) {
 
 addToCart.forEach(function (btn) {
   btn.addEventListener('click', function (e) {
-    var pizza = JSON.parse(btn.dataset.pizza); // this comes from data-pizza from button in home.ejs 
-    // after clicking we need to update the cart and send the pizza o the cart
-
-    updateCart(pizza); // console.log(pizza)
+    var pizza = JSON.parse(btn.dataset.pizza);
+    updateCart(pizza);
   });
-}); //  this automatically compiles and goes into the public folder due to laravel mix. 
-// not working:
-// const alertMsg = docuemnt.querySelector('#success-alert')
-// if(alertMsg){
-//     setTimeout(() => {
-//         alertMsg.remove()
-//     }, 2000)
-// }
-
-(0,_admin__WEBPACK_IMPORTED_MODULE_2__.initAdmin)(); // change order status
-
+});
+(0,_admin__WEBPACK_IMPORTED_MODULE_2__.initAdmin)();
 var statuses = document.querySelectorAll('.status_line');
 var order = document.querySelector('#hiddenInput') ? document.querySelector('#hiddenInput').value : null;
 order = JSON.parse(order);
-var time = document.createElement('small'); // console.log(order)
+var time = document.createElement('small');
 
 function updateStatus(order) {
   var StepCompleted = true;
@@ -23855,7 +23844,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	var installedModules = {};
 /******/
 /******/ 	// The require function
-/******/ 	function __nested_webpack_require_874__(moduleId) {
+/******/ 	function __nested_webpack_require_889__(moduleId) {
 /******/
 /******/ 		// Check if module is in cache
 /******/ 		if(installedModules[moduleId]) {
@@ -23869,7 +23858,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 		};
 /******/
 /******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __nested_webpack_require_874__);
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __nested_webpack_require_889__);
 /******/
 /******/ 		// Flag the module as loaded
 /******/ 		module.l = true;
@@ -23880,17 +23869,17 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__nested_webpack_require_874__.m = modules;
+/******/ 	__nested_webpack_require_889__.m = modules;
 /******/
 /******/ 	// expose the module cache
-/******/ 	__nested_webpack_require_874__.c = installedModules;
+/******/ 	__nested_webpack_require_889__.c = installedModules;
 /******/
 /******/ 	// identity function for calling harmony imports with the correct context
-/******/ 	__nested_webpack_require_874__.i = function(value) { return value; };
+/******/ 	__nested_webpack_require_889__.i = function(value) { return value; };
 /******/
 /******/ 	// define getter function for harmony exports
-/******/ 	__nested_webpack_require_874__.d = function(exports, name, getter) {
-/******/ 		if(!__nested_webpack_require_874__.o(exports, name)) {
+/******/ 	__nested_webpack_require_889__.d = function(exports, name, getter) {
+/******/ 		if(!__nested_webpack_require_889__.o(exports, name)) {
 /******/ 			Object.defineProperty(exports, name, {
 /******/ 				configurable: false,
 /******/ 				enumerable: true,
@@ -23900,27 +23889,27 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__nested_webpack_require_874__.n = function(module) {
+/******/ 	__nested_webpack_require_889__.n = function(module) {
 /******/ 		var getter = module && module.__esModule ?
 /******/ 			function getDefault() { return module['default']; } :
 /******/ 			function getModuleExports() { return module; };
-/******/ 		__nested_webpack_require_874__.d(getter, 'a', getter);
+/******/ 		__nested_webpack_require_889__.d(getter, 'a', getter);
 /******/ 		return getter;
 /******/ 	};
 /******/
 /******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__nested_webpack_require_874__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/ 	__nested_webpack_require_889__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__nested_webpack_require_874__.p = "";
+/******/ 	__nested_webpack_require_889__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __nested_webpack_require_874__(__nested_webpack_require_874__.s = 6);
+/******/ 	return __nested_webpack_require_889__(__nested_webpack_require_889__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __nested_webpack_require_3313__) {
+/***/ (function(module, exports, __nested_webpack_require_3393__) {
 
 "use strict";
 
@@ -23945,7 +23934,7 @@ exports.classList = classList;
 exports.visibilityChangeFlow = visibilityChangeFlow;
 exports.createAudioElements = createAudioElements;
 
-var _api = __nested_webpack_require_3313__(1);
+var _api = __nested_webpack_require_3393__(1);
 
 var API = _interopRequireWildcard(_api);
 
@@ -24239,7 +24228,7 @@ function getExtension(fileName) {
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports, __nested_webpack_require_11619__) {
+/***/ (function(module, exports, __nested_webpack_require_12018__) {
 
 "use strict";
 
@@ -24264,7 +24253,7 @@ exports.fire = fire;
 exports.openFlow = openFlow;
 exports.closeFlow = closeFlow;
 
-var _utils = __nested_webpack_require_11619__(0);
+var _utils = __nested_webpack_require_12018__(0);
 
 var Utils = _interopRequireWildcard(_utils);
 
@@ -24681,7 +24670,7 @@ function closeFlow(ref) {
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports, __nested_webpack_require_21770__) {
+/***/ (function(module, exports, __nested_webpack_require_22558__) {
 
 "use strict";
 
@@ -24691,7 +24680,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.NotyButton = undefined;
 
-var _utils = __nested_webpack_require_21770__(0);
+var _utils = __nested_webpack_require_22558__(0);
 
 var Utils = _interopRequireWildcard(_utils);
 
@@ -24977,7 +24966,7 @@ var Push = exports.Push = function () {
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports, __nested_webpack_require_30823__) {
+/***/ (function(module, exports, __nested_webpack_require_31891__) {
 
 /* WEBPACK VAR INJECTION */(function(process, global) {var require;/*!
  * @overview es6-promise - a tiny implementation of Promises/A+.
@@ -25115,7 +25104,7 @@ function flush() {
 function attemptVertx() {
   try {
     var r = require;
-    var vertx = __nested_webpack_require_30823__(9);
+    var vertx = __nested_webpack_require_31891__(9);
     vertxNext = vertx.runOnLoop || vertx.runOnContext;
     return useVertxTimer();
   } catch (e) {
@@ -26136,7 +26125,7 @@ return Promise$2;
 
 //# sourceMappingURL=es6-promise.map
 
-/* WEBPACK VAR INJECTION */}.call(exports, __nested_webpack_require_30823__(7), __nested_webpack_require_30823__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __nested_webpack_require_31891__(7), __nested_webpack_require_31891__(8)))
 
 /***/ }),
 /* 5 */
@@ -26146,7 +26135,7 @@ return Promise$2;
 
 /***/ }),
 /* 6 */
-/***/ (function(module, exports, __nested_webpack_require_59670__) {
+/***/ (function(module, exports, __nested_webpack_require_61908__) {
 
 "use strict";
 
@@ -26157,23 +26146,23 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /* global VERSION */
 
-__nested_webpack_require_59670__(5);
+__nested_webpack_require_61908__(5);
 
-var _es6Promise = __nested_webpack_require_59670__(4);
+var _es6Promise = __nested_webpack_require_61908__(4);
 
 var _es6Promise2 = _interopRequireDefault(_es6Promise);
 
-var _utils = __nested_webpack_require_59670__(0);
+var _utils = __nested_webpack_require_61908__(0);
 
 var Utils = _interopRequireWildcard(_utils);
 
-var _api = __nested_webpack_require_59670__(1);
+var _api = __nested_webpack_require_61908__(1);
 
 var API = _interopRequireWildcard(_api);
 
-var _button = __nested_webpack_require_59670__(2);
+var _button = __nested_webpack_require_61908__(2);
 
-var _push = __nested_webpack_require_59670__(3);
+var _push = __nested_webpack_require_61908__(3);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 

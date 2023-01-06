@@ -2,7 +2,7 @@ const order = require("../../../models/order")
 
 function orderController() {
     return {
-        index(req, res) { //showing not completed orders, and populate just gets the customer id and gets all details of that customer/user
+        index(req, res) {
            order.find({ status: { $ne: 'completed' } }, null, { sort: { 'createdAt': -1 }}).populate('customerId', '-password').exec((err, orders) => {
                if(req.xhr) {
                    return res.json(orders)
